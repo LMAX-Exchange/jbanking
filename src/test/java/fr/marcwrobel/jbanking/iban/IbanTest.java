@@ -15,15 +15,21 @@
  */
 package fr.marcwrobel.jbanking.iban;
 
-import com.google.common.collect.Sets;
-import fr.marcwrobel.jbanking.IsoCountry;
-import fr.marcwrobel.jbanking.TestUtils;
-import org.junit.Test;
-
 import java.util.Set;
 
+import com.google.common.collect.Sets;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+
+import fr.marcwrobel.jbanking.IsoCountry;
+import fr.marcwrobel.jbanking.TestUtils;
+
 import static fr.marcwrobel.jbanking.TestUtils.shouldHaveThrown;
-import static org.junit.Assert.*;
 
 /**
  * Tests for the {@link Iban} class.
@@ -99,7 +105,8 @@ public class IbanTest {
             "VG14NDUM4605555206975725",
             "JO94CBJO0010000000000131000302",
             "QA58DOHB00001234567890ABCDEFG",
-            "TL380080012345678910157"
+            "TL380080012345678910157",
+            "UA573543470006762462054925026" // Note: Ukraine IBAN format not formally listed in SWIFT IBAN registry but in active use by some Ukrainian banks.
     );
 
     private static final String VALID_IBAN_COUNTRY = "FR";

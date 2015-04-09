@@ -15,12 +15,13 @@
  */
 package fr.marcwrobel.jbanking.iban;
 
-import fr.marcwrobel.jbanking.IsoCountry;
-import fr.marcwrobel.jbanking.swift.SwiftPattern;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.Set;
+
+
+import fr.marcwrobel.jbanking.IsoCountry;
+import fr.marcwrobel.jbanking.swift.SwiftPattern;
 
 /**
  * Provides BBAN (also known as basic bank account number) structure for each ISO 13616-compliant national IBAN formats.
@@ -111,6 +112,7 @@ public enum BbanStructure {
     TURKEY(IsoCountry.TURKEY, "5!n1!c16!c"),
     UNITED_ARAB_EMIRATES(IsoCountry.UNITED_ARAB_EMIRATES, "3!n16!n"),
     UNITED_KINGDOM(IsoCountry.UNITED_KINGDOM, "4!a6!n8!n"),
+    UKRAINE(IsoCountry.UKRAINE, "25!c"), // Note: Not formally listed in SWIFT IBAN registry but in active use by some Ukrainian banks.
     QATAR(IsoCountry.QATAR, "4!a21!c"),
     BRITISH_VIRGIN_ISLANDS(IsoCountry.BRITISH_VIRGIN_ISLANDS, "4!a16!n");
 
